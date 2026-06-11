@@ -1,0 +1,211 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --color-brand-primary: #ff7a00;    /* Premium Deep Orange */
+  --color-brand-accent: #ff8c00;     /* Vibrant Amber Accent */
+  --color-brand-dark: #000000;       /* Ultra Deep Black */
+  --color-card-bg: #0C0C0C;          /* Deep Card Background */
+  --color-brand-gray: #121212;       /* Fine Gray */
+  --color-brand-steel: #1A1A1A;      /* Secondary Dark Gray */
+  --font-body: 'Outfit', sans-serif;
+
+  /* Animation Tokens */
+  --transition-smooth: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.3s ease-out;
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-dark);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-brand-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  letter-spacing: -0.02em;
+}
+
+/* ── Hard Industrial Design System (Optimized) ───────────────────────────── */
+
+@utility glass-card {
+  background: rgba(12, 12, 12, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 122, 0, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility glass-card-hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 122, 0, 0.22),
+    0 0 60px rgba(255, 122, 0, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+@utility glass-nav {
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── Bold Utility Styles ──────────────────────────────── */
+
+@utility glow-primary {
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.15);
+}
+
+@utility glow-primary-strong {
+  box-shadow: 0 0 40px rgba(255, 140, 0, 0.2);
+}
+
+@utility text-glow-orange {
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
+/* ── Typography Effects ───────────────────────────── */
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Nav Link Animation ───────────────────────────── */
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0.2em !important;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--color-brand-primary);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after, .active-link::after {
+  width: 100%;
+}
+
+/* ── Industrial Buttons ───────────────────────────── */
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-black font-black py-4 px-8 rounded-sm transition-all duration-300 active:scale-95 text-xs uppercase tracking-widest hover:brightness-110 hover:shadow-[0_0_30px_rgba(255,140,0,0.3)];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white font-bold py-4 px-8 rounded-sm transition-all duration-300 active:scale-95 text-xs uppercase tracking-widest hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)];
+}
+
+/* ── Industrial Badge ─────────────────────────── */
+
+.label-tag {
+  @apply text-white/40 font-black uppercase tracking-[0.4em] text-[10px] mb-4 inline-block bg-white/5 px-4 py-1.5 border border-white/5 rounded-sm transition-all duration-700 ease-out;
+}
+
+/* ── Form Interactions ──────────────────────────── */
+
+.form-input {
+  @apply w-full border px-4 py-4 text-white outline-none;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.92);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.form-input:focus {
+  border-color: rgba(255, 122, 0, 0.65);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0 0 0 2px rgba(255, 122, 0, 0.12),
+    0 0 24px rgba(255, 122, 0, 0.12);
+}
+
+/* ── Card Interaction System ────────────────────── */
+
+.interactive-card {
+  @apply transition-all duration-500 ease-cinematic cursor-pointer;
+}
+
+.interactive-card:hover {
+  @apply -translate-y-2 scale-[1.02] shadow-[0_20px_40px_rgba(0,0,0,0.6)] border-white/10;
+}
+
+.interactive-card:hover .glow-reveal {
+  @apply opacity-100;
+}
+
+/* ── Sections ─────────────────────────────────────── */
+
+section {
+  padding: 6rem 1.5rem;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 8rem 4rem;
+  }
+}
+
+/* ── Scrollbar ────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-brand-dark); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-brand-primary); }
+
+/* ── Floating WhatsApp Pulse ────────────────────── */
+
+@keyframes wa-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0 rgba(37, 211, 102, 0.45),
+      0 6px 28px rgba(37, 211, 102, 0.28);
+  }
+  55% {
+    box-shadow:
+      0 0 0 14px rgba(37, 211, 102, 0),
+      0 6px 28px rgba(37, 211, 102, 0.35);
+  }
+}
+
+.wa-float {
+  animation: wa-pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 lg:gap-24">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12 lg:gap-24 w-full sm:w-auto">
             <div className="flex flex-col gap-6">
               <span className="text-white/20 text-[10px] font-black uppercase tracking-[0.3em]">Directory</span>
               <ul className="flex flex-col gap-4 text-xs font-bold uppercase tracking-[0.2em] text-white/50">
@@ -80,11 +80,11 @@ const Footer = () => {
         </div>
 
         {/* Legal Footer */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/10 text-[9px] font-black tracking-[0.4em] uppercase">
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+          <p className="text-white/10 text-[9px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase">
             &copy; {new Date().getFullYear()} GV WELDING WORKS. ALL RIGHTS RESERVED.
           </p>
-          <div className="flex gap-10">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-10">
             <a href="#" className="text-white/20 text-[9px] font-black tracking-[0.2em] uppercase hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="text-white/20 text-[9px] font-black tracking-[0.2em] uppercase hover:text-white transition-colors">Terms of Service</a>
           </div>

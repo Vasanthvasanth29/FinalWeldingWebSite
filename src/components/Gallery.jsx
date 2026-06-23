@@ -108,7 +108,7 @@ const Gallery = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black tracking-tighter text-white mt-6 uppercase leading-[0.9]"
+              className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white mt-6 uppercase leading-[0.9]"
             >
               Crafting <span className="text-brand-primary">Legacies</span> <br /> 
               <span className="text-white/40 italic font-serif normal-case tracking-normal">
@@ -129,7 +129,7 @@ const Gallery = () => {
               <button
                 key={cat}
                 onClick={() => handleCategoryChange(cat)}
-                className={`px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 border ${
+                className={`px-5 py-2 md:px-8 md:py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 border ${
                   activeCategory === cat 
                   ? "bg-brand-primary border-brand-primary text-black shadow-[0_10px_30px_rgba(255,140,0,0.3)]" 
                   : "bg-white/5 border-white/5 text-white/50 hover:border-white/20 hover:text-white"
@@ -160,7 +160,7 @@ const Gallery = () => {
                     transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
                   }
                 }}
-                className="interactive-card group relative flex flex-col h-[520px] overflow-hidden rounded-[2.8rem] bg-[#0a0a0a]/40 backdrop-blur-md border border-white/[0.07] shadow-[0_30px_70px_rgba(0,0,0,0.7)] hover:border-brand-primary/30 transition-all duration-700"
+                className="interactive-card group relative flex flex-col h-[400px] sm:h-[480px] xl:h-[520px] overflow-hidden rounded-[2.8rem] bg-[#0a0a0a]/40 backdrop-blur-md border border-white/[0.07] shadow-[0_30px_70px_rgba(0,0,0,0.7)] hover:border-brand-primary/30 transition-all duration-700"
               >
                 {/* Subtle Inner depth layer */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none z-[1]" />
@@ -169,7 +169,7 @@ const Gallery = () => {
                 <div className="absolute inset-0 z-[1] opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] mix-blend-overlay" />
 
                 {/* Cinematic Image Container */}
-                <div className="relative h-72 xl:h-80 overflow-hidden">
+                <div className="relative h-56 sm:h-64 xl:h-80 overflow-hidden">
                   <img 
                     src={img.src} 
                     alt={img.title} 

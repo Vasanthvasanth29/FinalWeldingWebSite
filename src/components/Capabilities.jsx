@@ -90,7 +90,7 @@ const Capabilities = () => (
 
           <motion.h2
             {...slideLeft(0.1)}
-            className="text-5xl md:text-7xl font-black tracking-tight text-white uppercase leading-[1.1]"
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white uppercase leading-[1.1]"
             style={{ fontFamily: "'Inter', 'Outfit', sans-serif" }}
           >
             <span className="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">Engineered</span> <br />
@@ -149,8 +149,8 @@ const Capabilities = () => (
             >
               <div
                 className={[
-                  'interactive-card relative flex flex-col items-start overflow-hidden rounded-[2rem] p-10 lg:p-12',
-                  isCenter ? 'z-10 min-h-[440px]' : 'min-h-[420px]',
+                  'interactive-card relative flex flex-col items-start overflow-hidden rounded-[2rem] p-6 sm:p-10 lg:p-12',
+                  isCenter ? 'z-10 min-h-[320px] sm:min-h-[440px]' : 'min-h-[300px] sm:min-h-[420px]',
                   'bg-black/[0.14] backdrop-blur-[3px] border border-white/[0.06] shadow-[0_10px_40px_rgba(0,0,0,0.5)]',
                   'hover:shadow-[0_0_60px_rgba(255,122,0,0.25)] hover:border-white/[0.12] hover:brightness-110'
                 ].join(' ')}
@@ -212,7 +212,7 @@ const Capabilities = () => (
           <div 
             key={label} 
             className={[
-              'group flex items-center gap-3.5 px-8 py-4',
+              'group flex items-center gap-3.5 px-5 py-3 sm:px-8 sm:py-4',
               'rounded-full', // Pill shape
               'bg-white/[0.03] backdrop-blur-sm', // Glass style pill badge
               'border border-white/[0.08]', // Clean thin border

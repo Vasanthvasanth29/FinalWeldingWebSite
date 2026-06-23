@@ -108,7 +108,7 @@ const Hero = () => {
           className="mb-8"
         >
           <h1
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] font-black tracking-tighter uppercase text-white leading-[0.85]"
+            className="text-[14vw] sm:text-6xl md:text-8xl lg:text-[8.5rem] font-black tracking-tighter uppercase text-white leading-[0.85]"
             style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7), 0 1px 0 rgba(0,0,0,0.9)' }}
           >
             GV{' '}
@@ -154,10 +154,10 @@ const Hero = () => {
           transition={{ duration: 1.2, delay: 0.8, ease: 'easeOut' }}
           className="flex flex-col sm:flex-row items-center gap-6"
         >
-          <a href="/gallery" className="btn-primary h-16 px-14 text-sm tracking-widest shadow-[0_10px_40px_rgba(255,140,0,0.25)] active:scale-95">
+          <a href="/gallery" className="btn-primary h-16 px-8 md:px-14 text-sm tracking-widest shadow-[0_10px_40px_rgba(255,140,0,0.25)] active:scale-95 w-full sm:w-auto text-center">
             Explore Projects
           </a>
-          <a href="/contact" className="btn-secondary h-16 px-14 text-sm border-white/8 tracking-widest">
+          <a href="/contact" className="btn-secondary h-16 px-8 md:px-14 text-sm border-white/8 tracking-widest w-full sm:w-auto text-center">
             Contact Us
           </a>
         </motion.div>

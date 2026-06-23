@@ -42,7 +42,7 @@ const Services = () => {
           <span className="text-brand-primary/50 font-black uppercase tracking-[0.7em] text-[10px] mb-8 inline-block">
             OUR CAPABILITIES
           </span>
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight uppercase leading-none">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-8 tracking-tight uppercase leading-none">
             EXPERT <span className="text-brand-primary drop-shadow-[0_0_30px_rgba(255,122,0,0.3)]">SERVICES</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-primary/20 mx-auto rounded-full shadow-[0_0_20px_rgba(255,122,0,0.4)]" />
@@ -80,7 +80,7 @@ const Services = () => {
                 <div className="absolute inset-0 z-[1] opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] mix-blend-overlay"></div>
 
                 {/* Cinematic Background Image */}
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-64 sm:h-80 overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title} 

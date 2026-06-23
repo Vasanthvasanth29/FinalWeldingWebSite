@@ -226,7 +226,7 @@ const Contact = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-5xl md:text-7xl font-black tracking-tighter mb-8 text-white uppercase leading-[0.9]"
+                className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-8 text-white uppercase leading-[0.9]"
                 style={{ textShadow: '0 2px 24px rgba(0,0,0,0.6)' }}
               >
                 LET'S FORGE
@@ -244,7 +244,7 @@ const Contact = () => {
                 </motion.span>
               </motion.h2>
 
-              <p className="mb-16 max-w-md text-lg md:text-xl leading-relaxed font-medium"
+              <p className="mb-16 max-w-md text-base md:text-lg lg:text-xl leading-relaxed font-medium"
                  style={{ color: 'rgba(255,255,255,0.42)' }}>
                 Our engineering consultants are ready to discuss your custom fabrication needs.
                 Expect a response within 2 business hours.
@@ -323,7 +323,7 @@ const Contact = () => {
                 boxShadow: '0 28px 70px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,122,0,0.22), 0 0 60px rgba(255,122,0,0.09), inset 0 1px 0 rgba(255,255,255,0.07)',
                 transition: { duration: 0.45, ease: CINEMATIC },
               }}
-              className="glass-card rounded-[3rem] p-10 md:p-14 relative"
+              className="glass-card rounded-[3rem] p-6 sm:p-10 md:p-14 relative"
             >
               {/* Orange edge accent */}
               <div className="absolute top-0 right-14 w-12 h-[3px] rounded-b-full bg-gradient-to-r from-brand-primary to-amber-400 shadow-[0_0_18px_rgba(255,140,0,0.55)]" />

@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="max-w-[1700px] mx-auto px-8 lg:px-16 flex items-center justify-between">
           
           {/* Brand Identity */}
-          <Link to="/" onClick={handleMobileMenuClick} className="flex items-center gap-5 z-50 group cursor-pointer">
+          <Link to="/" onClick={handleMobileMenuClick} className="flex items-center gap-3 md:gap-5 z-50 group cursor-pointer shrink-0">
             <div className="relative">
               <img 
                 src="/logo_emblem.png" 
@@ -144,7 +144,7 @@ const Navbar = () => {
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
             
-            <ul className="flex flex-col items-center gap-10 relative z-10 w-full px-12 text-center">
+            <ul className="flex flex-col items-center gap-6 md:gap-10 relative z-10 w-full px-6 md:px-12 text-center overflow-y-auto max-h-[80vh] py-10">
               {navLinks.map((link, idx) => (
                 <motion.li 
                   key={link.name}
@@ -156,7 +156,7 @@ const Navbar = () => {
                   <Link 
                     to={link.href} 
                     onClick={handleMobileMenuClick}
-                    className="text-4xl font-black tracking-tight text-white/40 hover:text-brand-primary transition-all duration-500 uppercase flex items-center justify-center gap-6 group"
+                    className="text-2xl md:text-4xl font-black tracking-tight text-white/40 hover:text-brand-primary transition-all duration-500 uppercase flex items-center justify-center gap-4 md:gap-6 group"
                   >
                     <span className="text-xs font-black text-brand-primary/30 group-hover:text-brand-primary transition-colors">0{idx + 1}</span>
                     {link.name}

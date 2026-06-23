@@ -98,8 +98,8 @@ function App() {
             className="flex flex-col items-center gap-6"
           >
             <img src="/logo_emblem.png" alt="GV Logo" className="w-24 h-24 object-contain animate-pulse" />
-            <div className="flex flex-col items-center">
-              <h2 className="text-2xl font-black tracking-[0.5em] text-white uppercase">GV WELDING WORKS</h2>
+            <div className="flex flex-col items-center text-center px-4">
+              <h2 className="text-lg md:text-2xl font-black tracking-[0.2em] md:tracking-[0.5em] text-white uppercase">GV WELDING WORKS</h2>
               <div className="w-48 h-[1px] bg-white/10 mt-4 overflow-hidden relative">
                  <motion.div 
                    initial={{ x: "-100%" }}

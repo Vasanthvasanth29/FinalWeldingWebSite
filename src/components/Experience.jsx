@@ -50,7 +50,7 @@ const Experience = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative h-[600px] md:h-[700px] w-full group rounded-[2.5rem] overflow-hidden"
+            className="relative h-[400px] sm:h-[600px] md:h-[700px] w-full group rounded-[2.5rem] overflow-hidden"
           >
             <div className="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/20 transition-colors duration-700"></div>
             <img 
@@ -63,7 +63,7 @@ const Experience = () => {
             <div className="absolute bottom-12 right-12 w-24 h-24 border-b-2 border-r-2 border-brand-primary/40 z-20 group-hover:w-32 group-hover:h-32 transition-all duration-700"></div>
             
             {/* Status Info Overlay */}
-            <div className="absolute bottom-16 left-16 z-20">
+            <div className="absolute bottom-6 left-6 md:bottom-16 md:left-16 z-20">
                <div className="flex items-center gap-4 bg-black/80 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-2xl shadow-2xl">
                   <div className="w-3 h-3 bg-brand-primary rounded-full animate-pulse shadow-[0_0_10px_#ff8c00]"></div>
                   <span className="text-[10px] font-black tracking-[0.3em] uppercase text-white/80">Active Operations</span>
@@ -82,7 +82,7 @@ const Experience = () => {
             <div className="label-tag border-brand-primary/20 bg-brand-primary/5 text-brand-primary w-max mb-10">
               OUR INDUSTRIAL HERITAGE
             </div>
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-10 text-white uppercase leading-[0.9]">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-10 text-white uppercase leading-[0.9]">
               Forging <br />
               <span className="text-brand-primary italic font-serif tracking-normal normal-case">Modern Legacies.</span>
             </h2>

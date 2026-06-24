@@ -11,6 +11,7 @@ import Gallery from './components/Gallery';
 import Capabilities from './components/Capabilities';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import NextPagePreview from './components/NextPagePreview';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -130,6 +131,7 @@ function App() {
               <Route path="/capabilities" element={<main className="pt-24 min-h-screen"><Capabilities /></main>} />
               <Route path="/contact" element={<main className="pt-24 min-h-screen"><Contact /></main>} />
             </Routes>
+            <NextPagePreview />
             <Footer />
           </SmoothScrollWrapper>
         </motion.div>

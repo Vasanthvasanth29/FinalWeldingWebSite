@@ -82,6 +82,7 @@ const Contact = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSubmitting,   setIsSubmitting]   = useState(false);
   const [isSuccess,      setIsSuccess]      = useState(false);
+  const [waUrl,          setWaUrl]          = useState('');
 
   const { scrollYProgress } = useScroll();
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '10%']);
@@ -106,7 +107,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const msg = `*New Inquiry from GV Welding Works*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email}%0A*Interested In:* ${selectedService.label}%0A%0A_Inquiry logged in official database._`;
-    const waUrl = `https://wa.me/916374942172?text=${msg}`;
+    const generatedWaUrl = `https://wa.me/916374942172?text=${msg}`;
+    setWaUrl(generatedWaUrl);
 
     try {
       const res = await fetch('http://localhost:8081/api/enquiry', {
@@ -116,7 +118,6 @@ const Contact = () => {
       });
       if (res.ok) {
         setIsSuccess(true);
-        window.open(waUrl, '_blank');
         setFormData({ name: '', phone: '', email: '', service: '', message: '' });
       } else {
         const err = await res.json();
@@ -525,15 +526,29 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => setIsSuccess(false)}
-                      className="mt-12 flex items-center gap-3 text-brand-primary text-[10px] font-black uppercase tracking-[0.3em] group"
-                    >
-                      Return to Form
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
-                    </motion.button>
+                    <div className="mt-12 flex flex-col sm:flex-row items-center gap-6">
+                      <motion.a
+                        href={waUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => setIsSuccess(false)}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center gap-3 bg-[#25d366] text-white px-8 py-4 rounded-xl text-[10px] font-black uppercase tracking-[0.3em] shadow-[0_10px_20px_rgba(37,211,102,0.2)]"
+                      >
+                        <FaWhatsapp size={18} />
+                        Continue to WhatsApp
+                      </motion.a>
+                      
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setIsSuccess(false)}
+                        className="flex items-center gap-2 text-white/50 hover:text-brand-primary text-[10px] font-black uppercase tracking-[0.3em] group transition-colors"
+                      >
+                        Close
+                      </motion.button>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

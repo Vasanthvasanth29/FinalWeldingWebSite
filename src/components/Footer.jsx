@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -40,10 +41,11 @@ const Footer = () => {
             <div className="flex flex-col gap-6">
               <span className="text-white/20 text-[10px] font-black uppercase tracking-[0.3em]">Directory</span>
               <ul className="flex flex-col gap-4 text-xs font-bold uppercase tracking-[0.2em] text-white/50">
-                <li><a href="#about" className="hover:text-brand-primary transition-colors">Heritage</a></li>
-                <li><a href="#services" className="hover:text-brand-primary transition-colors">Services</a></li>
-                <li><a href="#gallery" className="hover:text-brand-primary transition-colors">Projects</a></li>
-                <li><a href="#contact" className="hover:text-brand-primary transition-colors">Contact</a></li>
+                <li><Link to="/" className="hover:text-brand-primary transition-colors">Heritage</Link></li>
+                <li><Link to="/capabilities" className="hover:text-brand-primary transition-colors">Capabilities</Link></li>
+                <li><Link to="/services" className="hover:text-brand-primary transition-colors">Services</Link></li>
+                <li><Link to="/gallery" className="hover:text-brand-primary transition-colors">Gallery</Link></li>
+                <li><Link to="/contact" className="hover:text-brand-primary transition-colors">Contact</Link></li>
               </ul>
             </div>
 
